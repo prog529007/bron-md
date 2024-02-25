@@ -161,7 +161,7 @@ async function generateMarkdown(projectType: string): Promise<string> {
 }
 
 async function getGPTAnalysis(code: string): Promise<string> {
-    const apiKey = "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";
+    const apiKey = process.env.OPENAPI_KEY;
     const response = await axios.post('https://api.openai.com/v1/chat/completions', {
 		model: "gpt-3.5-turbo",
 		messages: [
