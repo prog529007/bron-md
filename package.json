@@ -1,9 +1,10 @@
 {
   "name": "bron-md",
   "displayName": "bron-md",
+  "icon": "Images/bron.png",
   "publisher": "bron-tools",
   "description": "",
-  "version": "0.1.0",
+  "version": "3.1.0",
   "engines": {
     "vscode": "^1.52.0"
   },
@@ -19,7 +20,7 @@
         "title": "Hello World"
       },
       {
-        "command": "extension.configureProject",
+        "command": "bron.configureProject",
         "title": "Configure"
       },
       {
@@ -33,6 +34,10 @@
       {
         "command": "bron.stopPomodoro",
         "title": "Stop Pomodoro"
+      },
+      {
+        "command": "bron.analyzeCode",
+        "title": "Analyze Code"
       }
     ]
   },
@@ -45,14 +50,17 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.52.0",
     "@types/mocha": "^10.0.6",
     "@types/node": "18.x",
+    "@types/vscode": "^1.52.0",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
     "@typescript-eslint/parser": "^7.0.2",
-    "eslint": "^8.56.0",
-    "typescript": "^5.3.3",
     "@vscode/test-cli": "^0.0.6",
-    "@vscode/test-electron": "^2.3.9"
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "axios": "^1.6.7"
   }
 }
